@@ -26,6 +26,7 @@ body {
     "filtros"
     "main"
     "footer";
+  height: 100vh;
 }
 
 .navbar {
@@ -84,17 +85,17 @@ body {
 }
 
 .producto {
-  /* grid-area: cards; */
   display: flex;
   box-shadow: 1px 1px 5px 1px rgb(193, 191, 191);
   flex-direction: column;
   align-items: center;
   justify-content: end;
   width: 350px;
+  height: 426px;
   gap: 20px;
-  /* border: 1px solid black; */
+
   background-color: rgb(255, 255, 255);
-  /* height: 400px; */
+
   padding: 15px;
 }
 .producto__nombre {
@@ -102,7 +103,7 @@ body {
   font-size: 1.5rem;
 }
 .producto__img {
-  width: 100%;
+  width: 80%;
 }
 
 .producto__boton {
@@ -156,9 +157,8 @@ body {
     grid-template-areas:
       "navbar filtros filtros filtros filtros"
       "navbar main main main main"
-      "navbar main main main main"
-      "navbar main main main main"
       "footer main main main main";
+    grid-template-rows: 1fr 8fr 1fr;
   }
   .navbar {
     flex-direction: column;
@@ -179,6 +179,14 @@ body {
   .burger {
     display: none;
   }
+  .footer p{
+    text-align: center;
+  }
+  .main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 /* 
@@ -194,78 +202,4 @@ body {
   height: 100vh;
 }
 
-.navbar {
-  grid-area: navbar;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  background-color: #25527b;
-}
-.sidebar {
-  grid-area: sidebar;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex;
-  align-items: flex-start;
-  padding-left: 20px;
-  padding-top: 20px;
-  background-color: #e1dada;
-  gap: 10px;
-}
-.main {
-  grid-area: main;
 
-  display: grid;
-  overflow: auto;
-  resize: both;
-  gap: 10px;
-  grid-template-rows: max-content;
-  grid-template-columns: repeat(3, 1fr);
-  background-color: #e1dada;
-}
-.footer {
-  grid-area: footer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: black;
-  background-color: rgb(235, 235, 227);
-}
-
-.item {
-  display: flex;
-
-  & p:first-child {
-    color: rgb(55, 54, 54);
-  }
-  & p:nth-child(2) {
-    font-weight: lighter;
-    color: rgb(102, 99, 99);
-  }
-}
-
-.producto {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: end;
-  gap: 20px;
-  border: 1px solid black;
-  background-color: rgb(255, 255, 255);
-  height: 400px;
-}
-
-.producto__img {
-  width: 220px;
-
-  object-fit: cover;
-}
-
-.producto__boton {
-  width: 100%;
-  background-color: #25527b;
-  color: white;
-  border: none;
-  padding: 10px 0;
-} */
