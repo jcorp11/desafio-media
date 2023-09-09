@@ -79,27 +79,30 @@ body {
   justify-content: center;
   gap: 20px;
   place-items: center;
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
 }
 
 .producto {
-  grid-area: cards;
+  /* grid-area: cards; */
   display: flex;
   box-shadow: 1px 1px 5px 1px rgb(193, 191, 191);
   flex-direction: column;
   align-items: center;
   justify-content: end;
-  width: 450px;
+  width: 350px;
   gap: 20px;
   /* border: 1px solid black; */
   background-color: rgb(255, 255, 255);
   /* height: 400px; */
   padding: 15px;
-  overflow-y: scroll;
-  scrollbar-gutter: stable;
 }
 .producto__nombre {
   font-weight: 300;
   font-size: 1.5rem;
+}
+.producto__img {
+  width: 100%;
 }
 
 .producto__boton {
